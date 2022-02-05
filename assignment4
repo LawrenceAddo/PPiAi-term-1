@@ -1,5 +1,6 @@
 # importing the module
 import sys
+import tkinter
 
 #creating contact list
 contacts = {
@@ -43,21 +44,19 @@ contacts = {
 print("contacts")
 
 #labeling contact parameters for easy print instructions
-labels = {
-     'mobile': 'mobile phone number',
-     'work': 'work phone number',
-     'email': 'personal email address',
-     'addr': 'home address',
-}
+mobile = str("mobile phone number")
+work = str("work phone number")
+email = str("personal email address")
+addr = str("home address")
 
-# Use the correct variable:
-mobile =str("mobile phone number")
-work =str("work phone number")
-email =str("personal email address")
-addr =str("home address")
+# dic variable assignment:
+mobile = contacts.get("mobile phone number")
+work = contacts.get("work phone number")
+email = contacts.get("personal email address")
+addr = contacts.get("home address")
 
 #search parameter by name
-name = input('Name: ')
+name = input('Search Contact Name: ')
 
 # search in contacts
 #request = input('mobile or work or email ? ')
