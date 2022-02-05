@@ -1,0 +1,73 @@
+# importing the module
+import sys
+
+#creating contact list
+contacts = {
+
+     'David': {
+         'mobile phone number': '123-456-7890',
+         'work phone number': '098-765-4321',
+         'personal email address': 'david@home-email.com',
+         'home address': '1234 Somewhere Dr., Denver, CO, 80221 USA',
+    },
+
+     'Zofia': {
+         'mobile phone number': '854-111-9034',
+         'work phone number': '456-123-7890',
+         'personal email address': 'zofia@yahoomail.com',
+         'home address': '1111 Aberdeen St., Long Island, IL, 10111 USA',
+    },
+
+     'Samuel': {
+         'mobile phone number': '755-090-1243',
+         'work phone number': '176-243-0997',
+         'personal email address': 'samuel@gmail.com',
+         'home address': '1234 Somewhere Dr., Denver, CO, 80221 USA',
+    },
+
+    'Jake': {
+         'mobile phone number': '410-591-4647',
+         'work phone number': '410-617-2153',
+         'personal email address': 'jake1@gmail.com',
+         'home address': '1734 Cambridge Place',
+    },
+
+    'Mary': {
+         'mobile phone number': '908-938-0821',
+         'work phone number': '908-927-5948',
+         'personal email address': 'maryxyz@gmail.com',
+         'home address': '3657 Fairfax Drive',
+    }
+
+}
+print("contacts")
+
+#labeling contact parameters for easy print instructions
+labels = {
+     'mobile': 'mobile phone number',
+     'work': 'work phone number',
+     'email': 'personal email address',
+     'addr': 'home address',
+}
+
+# Use the correct variable:
+#mobile =str("mobile phone number")
+#work =str("work phone number")
+#email =str("personal email address")
+#addr =str("home address")
+
+#search parameter by name
+name = input('Name: ')
+
+# search in contacts
+#request = input('mobile or work or email ? ')
+
+#Return the search results
+if name in contacts:
+    print("%s can be reached via their mobile number at %s" % (name, mobile))
+    print("%s can be reached via their work phone number at %s" % (name, work))
+    print("%s can be reached via their email address at %s" % (name, email))
+    print("%s can be reached via their home address at %s" % (name, addr))
+
+if name not in contacts:
+    print("No contact information found for %s! Be sure to ask them for their contact details next time you see them." % (name))
