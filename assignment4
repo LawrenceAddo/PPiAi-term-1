@@ -51,10 +51,10 @@ labels = {
 }
 
 # Use the correct variable:
-#mobile =str("mobile phone number")
-#work =str("work phone number")
-#email =str("personal email address")
-#addr =str("home address")
+mobile =str("mobile phone number")
+work =str("work phone number")
+email =str("personal email address")
+addr =str("home address")
 
 #search parameter by name
 name = input('Name: ')
@@ -64,6 +64,7 @@ name = input('Name: ')
 
 #Return the search results
 if name in contacts:
+    print("Contact information found for %s!" % (name))
     print("%s can be reached via their mobile number at %s" % (name, mobile))
     print("%s can be reached via their work phone number at %s" % (name, work))
     print("%s can be reached via their email address at %s" % (name, email))
