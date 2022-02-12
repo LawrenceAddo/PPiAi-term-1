@@ -1,4 +1,6 @@
 #Given a list, display it in backward order
+from typing import List
+
 my_list = [100, 200, 300, 400, 500]
 my_list.reverse()
 print(my_list)
@@ -24,8 +26,13 @@ my_list3[index] = 200
 print(my_list3)
 #Ans [5, 10, 15, 200, 25, 50, 20]
 
-my_list4 = [6, 11, 16, 21, 26, 51, 21]
-ValueError: int(20) is not in my_list4
+my_list4: list[int] = [6, 11, 16, 21, 26, 51, 21]
+if 20 in my_list4:
+    index = my_list4.index(20)
+    my_list4[index] = 200
+else:
+    ValueError
+print(my_list4)
 #Ans [6, 11, 16, 21, 26, 51, 21]
 
 my_list5 = [5, 10, 15, 21, 25, 50, 20]
