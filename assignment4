@@ -39,35 +39,37 @@ contacts = {
          'personal email address': 'maryxyz@gmail.com',
          'home address': '3657 Fairfax Drive',
     }
-
 }
 print("contacts")
 
-#labeling contact parameters for easy print instructions
-mobile = str("mobile phone number")
-work = str("work phone number")
-email = str("personal email address")
-addr = str("home address")
+# These labels will be used when printing the output.
+labels = {
+     'mobile phone number': 'mobile number',
+     'work phone number': 'work phone number',
+     'personal email address': 'email address',
+     'home address': 'home address'
+}
 
-# dic variable assignment:
-mobile = contacts.get("mobile phone number")
-work = contacts.get("work phone number")
-email = contacts.get("personal email address")
-addr = contacts.get("home address")
+# Dynamic search input type in contacts
+request = input('mobile phone number (m) or '
+                'work phone number (w) or '
+                'personal email (e) or '
+                'home address (h) ? ')
 
-#search parameter by name
+# search address by contact name
 name = input('Search Contact Name: ')
 
-# search in contacts
-#request = input('mobile or work or email ? ')
+
+# Use the correct key:
+if request == 'm': key = 'mobile phone number'
+if request == 'w': key = 'work phone number'
+if request == 'e': key = 'personal email address'
+if request == 'h': key = 'home address'
 
 #Return the search results
 if name in contacts:
-    print("Contact information found for %s!" % (name))
-    print("%s can be reached via their mobile number at %s" % (name, mobile))
-    print("%s can be reached via their work phone number at %s" % (name, work))
-    print("%s can be reached via their email address at %s" % (name, email))
-    print("%s can be reached via their home address at %s" % (name, addr))
-
+    print("{} can be reached via their {} at {}.".format(name, \
+                                                         labels[key], contacts[name][key]))
+#Return if contact name does not exist
 if name not in contacts:
     print("No contact information found for %s! Be sure to ask them for their contact details next time you see them." % (name))
