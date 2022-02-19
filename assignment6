@@ -1,0 +1,19 @@
+import array
+
+x = input("enter a 5 digit integer \n")
+if len(x)==5:  #valid if input is 5-numbers long
+    print("valid for processing") #valid output message if 5-numbers long
+    if 2 in [x]: #exclude 2 from the sum function
+        x.remove(2)
+    if 9 in [x]: #multiply 9 by 2 in the sum function
+        x.append(9*2)
+    else:
+        print (x)
+
+    #append(9) = (9*2)
+    sum = 0
+    for j in x:
+        sum = sum + int(j)
+        print("sum is ", sum)
+else:
+    print("invalid") #invalid output message if not 5-numbers long
