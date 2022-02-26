@@ -1,0 +1,19 @@
+"""
+Folder Name:
+            College
+Sub Folders:
+            Stream 1
+            Stream 2
+            Stream 3
+"""
+import os
+
+file_name = input("enter a valid file name here \n")
+if input in list('Stream 1, Stream 2, Stream 3'):
+    college = open(file_name, 'w')
+    college.write(file_name)
+else:
+    print('Invalid file name')
+
+exit(0)
+
