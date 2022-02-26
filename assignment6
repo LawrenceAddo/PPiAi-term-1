@@ -17,3 +17,72 @@ if len(x)==5:  #valid if input is 5-numbers long
         print("sum is ", sum)
 else:
     print("invalid") #invalid output message if not 5-numbers long
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Updated script below>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+import array
+
+xlist = [] #creating an empty list
+x = input("enter a 5 digit integer \n")
+xlist.append(x)  # append input to list xlist
+
+if len(x)==5:  #valid if input is 5-numbers long
+    print("valid for processing") #valid output message if 5-numbers long
+
+
+    #xlist = [int(i) for i in xlist]
+
+
+#Method 1
+    for index, item in enumerate(xlist): #exclude 2 from the sum function
+        if item == 2:
+            xlist[index] =''
+        i = 'nil'
+        print(xlist.replace('2', ''))
+
+    for index, item in enumerate(xlist): #exclude 2 from the sum function
+        if item == 9:
+            xlist[index] = index * 2
+
+    for i in xlist: #multiply 9 by 2 in the sum function
+        i == '9'
+        i = '9*2'
+        print(xlist.replace('9', i*2))
+        
+        
+        xlist = [int(i) for i in str(x)] #declaring integer to enable sum of string
+
+        print(f'{xlist[0]} + {xlist[1]} + {xlist[2]} + {xlist[3]} + {xlist[4]} =', sum(xlist))
+
+else:
+    print("invalid") #invalid output message if not 5-numbers long
+
+
+
+>>>>>>>>>>>>>>>#METHODS TO REPLACE 2 & 9 FOR YOUR KIND ADVICES >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+"""
+#Method 2
+xlist = ['' if item == 2 else item for item in xlist]
+        xlist = ['9*2' if item == 9 else item for item in xlist]
+
+    xlist= []
+    for i in range(len(xlist)):
+        if xlist[i] == 2:
+            xlist[i] ==''
+            print(xlist)
+"""
+
+"""
+#Method 3
+    xlist = []
+    for i in range(len(xlist)):
+            if xlist[i] == 9:
+                xlist[i] == 9*2
+                print(xlist)
+"""
+
+
+
+
+
